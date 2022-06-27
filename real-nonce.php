@@ -123,10 +123,6 @@ Class WPSimpleNonce {
 }
 
 
-if ( ! class_exists( 'WPSimpleNonce' ) ) {
-	require_once( 'WPSimpleNonce.php' );
-}
-
 add_shortcode( 'simpleNonce', 'WPSimpleNonce::createNonce' );
 
 
