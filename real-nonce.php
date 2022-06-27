@@ -70,21 +70,21 @@ Class WPSimpleNonce {
 	}
 
 
-	protected static function fetchNonce($name) {
-		$returnValue = get_option( self::option_root . '_' . $name );
-		$nonceExpires = get_option( self::option_root . '_expires_' . $name );
+	protected static function fetchNonce( $name ) {
+		$fetched_value = get_option( self::option_root . '_' . $name );
+		$nonce_expires = get_option( self::option_root . '_expires_' . $name );
 		
 		self::deleteNonce( $name );
 		
-		if ( $nonceExpires < time() ) {
-			$returnValue = null;
+		if ( $nonce_expires < time() ) {
+			$fetched_value = null;
 		}
 
-		return $returnValue;
+		return $fetched_value;
 	}
 
 
-	public static function deleteNonce($name) {
+	public static function deleteNonce( $name ) {
 		$optionDeleted = delete_option( self::option_root . '_' . $name );
 		$optionDeleted = $optionDeleted && delete_option( self::option_root . '_expires_' . $name);
 		return (bool) $optionDeleted;
