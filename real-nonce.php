@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Real Nonce
  * Version: 0.1
- * Description: A very simple, but genuine, NONCE system for ClassicPress Developers. Forked from wp-simple-nonce by Cal Evans with a major bug fix.
+ * Description: A very simple, but genuine, NONCE system for ClassicPress Developers. Forked, with a major bug fix, from wp-simple-nonce by Cal Evans.
  * Author: Tim Kaye
  * Author URI: https://timkaye.org
  * Plugin URI: https://timkaye.org
