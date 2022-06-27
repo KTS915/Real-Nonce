@@ -43,7 +43,7 @@ Class WPSimpleNonce {
 
 		$name = filter_var( $name, FILTER_SANITIZE_STRING );
 		$nonce = self::createNonce( $name );
-		$nonce['value'] = '<input type="hidden" name="' . $nonce['name'] . '" value="'.$nonce['value'].'" />';
+		$nonce['value'] = '<input type="hidden" name="' . $nonce['name'] . '" value="' . $nonce['value'] . '" />';
 		return $nonce;
 	}
 
