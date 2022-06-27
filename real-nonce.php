@@ -129,7 +129,6 @@ add_shortcode( 'simpleNonce', 'WPSimpleNonce::createNonce' );
 function wp_snonce_cleanup() {
 	WPSimpleNonce::clearNonces();
 }
-
 add_action( 'wp_simple_nonce_cleanup', 'wp_snonce_cleanup' );
 
 
@@ -138,5 +137,4 @@ function wp_simple_nonce_register_garbage_collection() {
 		wp_schedule_event( time(), 'hourly', 'wp_simple_nonce_cleanup' );
 	}
 }
-
 add_action( 'wp', 'wp_simple_nonce_register_garbage_collection' );
